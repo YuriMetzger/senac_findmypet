@@ -29,7 +29,7 @@ public class PetDAO implements IDAO {
 		$rs->bindParam(1, $id);
 
 		if ($rs->execute()
-			&& $rs->rowCount() > 0) {
+			and $rs->rowCount() > 0) {
 			while ($row = $rs->fetch(PDO::FETCH_OBJ)) {
 				$pet->setPetID($row->id_pet);
 				$pet->setUserID($row->id_user);
